@@ -7,5 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
 require('./controller/autenticacaoController')(app);
+require('./controller/projetoController')(app);
 
+//porta da API
 app.listen('3000');

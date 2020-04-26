@@ -7,7 +7,13 @@ const authConfig = require('../config/auth');
 const Usuario = require('../models/usuario');
 const router = express.Router();
 
-router.post('/register', async (req, res) => {
+function gerarToken(params = {}) {
+    return jwt.sign(params, authConfig.secret, {
+        expiresIn: 86400, 
+    });
+}
+
+router.post('/registro', async (req, res) => {
     const { email } = req.body;
 
     try {
@@ -20,7 +26,10 @@ router.post('/register', async (req, res) => {
 
         const usuario = await Usuario.create(req.body);
         usuario.senha = undefined;
-        return res.send({ usuario });
+        return res.send({ 
+            usuario,
+            token: gerarToken({ id: URLSearchParams.id })
+        });
     }   
     catch (err) {
         return res.status(400).send({
@@ -29,28 +38,24 @@ router.post('/register', async (req, res) => {
     }
 });
 
-router.post('/authenticate', async (req, res) => {
-    const { email, senha } = req.body;
-    const usuario = await Usuario.findOne({ email }).select('+senha');
+router.post('/autenticacao', async (req, res) => {
+    const { email, senha} = req.body;
+    const usuario = await Usuario.findOne({email}).select('+senha');
 
-    if (!usuario)
-        return res.status(400).send({
-            error: 'Usuário não encontrado'
-        });
+    if (!usuario) {
+        return res.status('400').send({ error: 'Usuário não encontrado'});
+    }
 
-    if (!await bcrypt.compare(senha, usuario.senha))
-        return res.status(400).send({
-            error: 'Senha inválida'
-        })
+    if (!await bcrypt.compare(senha, usuario.senha)) {
+        return res.status('400').send({ error: 'Senha invalida!'});
+    }
 
     usuario.senha = undefined;
 
-    const token = jwt.sign({ id = usuario.id }, authConfig.secret, {
-        expiresIn: 86400,
+    res.send({ 
+        usuario,
+        token: gerarToken({ id: URLSearchParams.id })
     });
-
-
-    res.send( { usuario, token } );
-})
+});
 
 module.exports = app => app.use('/auth', router);
