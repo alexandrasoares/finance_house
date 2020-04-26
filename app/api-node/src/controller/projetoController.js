@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.use(authMiddleware);
 router.get('/', (req, res) => {
-    res.send({ ok: true, user: req.userId });
+    res.send({ ok: true, usuario: req.usuarioId });
 });
 
 module.exports = app => app.use('/projeto', router);

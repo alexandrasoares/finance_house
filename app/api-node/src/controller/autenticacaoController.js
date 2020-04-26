@@ -54,7 +54,7 @@ router.post('/autenticacao', async (req, res) => {
 
     res.send({ 
         usuario,
-        token: gerarToken({ id: URLSearchParams.id })
+        token: gerarToken({ id: usuario.id })
     });
 });
 
