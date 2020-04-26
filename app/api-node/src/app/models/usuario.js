@@ -25,6 +25,16 @@ const UsuarioSchema = new mongoose.Schema({
         select: false
     }, 
 
+    resetSenhaToken: {
+        type: String,
+        select: false
+    },
+
+    resetSenhaExpirada: {
+        type: Date,
+        select: false
+    },
+
     confirmacaoSenha: {
         type: String,
         required: true,
