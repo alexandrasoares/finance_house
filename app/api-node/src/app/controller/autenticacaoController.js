@@ -64,7 +64,7 @@ router.post('/esqueceu_senha', async (req, res) => {
     const { email } = req.body;
 
     try {
-        const usuario = await Usuario.findOne( { email } );
+        const usuario = await Usuario.findOne({ email });
 
         if (!usuario) {
             return res.status(400).send({ error: 'Usuário não encontrado' });
@@ -81,13 +81,14 @@ router.post('/esqueceu_senha', async (req, res) => {
             }
         });
 
-        mailer.sendEmail({
+        mailer.sendMail({
             to: email,
-            from: 'alexandra.soares@outlook.com',
+            from: 'al.soares@reply.com',
             template: 'auth/esqueceu_senha',
-            context: { token }
+            context: { token },
         }, (err) => {
             if (err) {
+                console.log('ERRO NÃO ESPERADO', err);
                 return res.status(400).send({
                     error: 'Não foi possivel enviar a senha para o email.'
                 });
@@ -96,8 +97,49 @@ router.post('/esqueceu_senha', async (req, res) => {
             return res.send();
         })
     } catch (err) {
+        // console.log('ERRO NÃO ESPERADO', err);
         res.status(400).send({
-            error: 'Erro ao lembrar a senha, tente novamente!'
+            error: 'Erro interno ao tentar lembrar a senha, tente novamente!'
+        });
+    }
+});
+
+router.post('/resetar_senha', async (req, res) =>{
+
+    const { email, token, senha } = req.body;
+    try {
+        const usuario = await Usuario.findOne({ email })
+        .select('+resetSenhaToken resetSenhaExpirada');
+
+        if (!usuario) {
+            return res.status(400).send({
+                error: 'Usuaário não encontrado'
+            });
+        }
+
+        if (token !== usuario.resetSenhaToken) {
+            return res.status(400).send({
+                error: 'Token Inválido'
+            });
+        }
+        
+        const now = new Date();
+        
+        if (now > usuario.resetSenhaExpirada) {
+            return res.status(400).send({
+                error: 'Token expirado, gere um novo'
+            });
+        }
+
+        usuario.senha = senha;
+
+        await usuario.save();
+        res.send();
+
+    } catch (err) {
+        console.log('ERRO NAO ESPERADO', err);
+        res.status(400).send({
+            error: 'Não foi possível resetar a senha, tente novamente!'
         });
     }
 });

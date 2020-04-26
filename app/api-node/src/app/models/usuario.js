@@ -24,6 +24,12 @@ const UsuarioSchema = new mongoose.Schema({
         required: true,
         select: false
     }, 
+    
+    confirmacaoSenha: {
+        type: String,
+        required: true,
+        select: false
+    },
 
     resetSenhaToken: {
         type: String,
@@ -32,12 +38,6 @@ const UsuarioSchema = new mongoose.Schema({
 
     resetSenhaExpirada: {
         type: Date,
-        select: false
-    },
-
-    confirmacaoSenha: {
-        type: String,
-        required: true,
         select: false
     },
 
