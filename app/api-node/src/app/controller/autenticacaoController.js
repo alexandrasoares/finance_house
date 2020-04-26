@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
+const mailer = require('../../modules/mailer');
 
 const authConfig = require('../../config/auth');
 
@@ -80,7 +81,20 @@ router.post('/esqueceu_senha', async (req, res) => {
             }
         });
 
-        console.log(token, now);
+        mailer.sendEmail({
+            to: email,
+            from: 'alexandra.soares@outlook.com',
+            template: 'auth/esqueceu_senha',
+            context: { token }
+        }, (err) => {
+            if (err) {
+                return res.status(400).send({
+                    error: 'Não foi possivel enviar a senha para o email.'
+                });
+            }
+
+            return res.send();
+        })
     } catch (err) {
         res.status(400).send({
             error: 'Erro ao lembrar a senha, tente novamente!'
