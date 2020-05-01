@@ -113,7 +113,7 @@ router.post('/resetar_senha', async (req, res) =>{
 
         if (!usuario) {
             return res.status(400).send({
-                error: 'Usuaário não encontrado'
+                error: 'Usuário não encontrado'
             });
         }
 
