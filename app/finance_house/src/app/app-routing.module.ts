@@ -10,10 +10,6 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
-    path: 'slide-inicial',
-    loadChildren: () => import('./slide-inicial/slide-inicial.module').then( m => m.SlideInicialPageModule)
   }
 ];
 
