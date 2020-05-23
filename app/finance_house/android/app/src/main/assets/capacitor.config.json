@@ -1,6 +1,6 @@
 {
   "appId": "com.alexandra.financehouse",
-  "appName": "Finance House",
+  "appName": "finance_house",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -9,5 +9,8 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {}
+  "cordova": {},
+  "server": {
+   
+  }
 }
