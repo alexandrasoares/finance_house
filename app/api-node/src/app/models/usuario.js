@@ -49,7 +49,12 @@ const UsuarioSchema = new mongoose.Schema({
     dataCadastro: {
         type: Date,
         default: Date.now,
-    }
+    },
+
+    id_membro_familia: {
+        type: String,
+        required: true
+    },
 });
 
 UsuarioSchema.pre('save', async function(next){
