@@ -1,7 +1,0 @@
-{
-  "name": "finance-house-ui",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
