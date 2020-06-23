@@ -4,7 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./acesso/acesso.module').then( m => m.AcessoModule)
+  },
+  {
+    path: 'acesso',
+    loadChildren: () => import('./acesso/acesso.module').then( m => m.AcessoModule)
   },
   {
     path: 'home',
