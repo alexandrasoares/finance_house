@@ -1,0 +1,45 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Login</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- form -->
+            <form [formGroup]="loginForm">
+              <ion-item>
+                <ion-label position="stacked">Login ou e-mail</ion-label>
+                <ion-input type="text" formControlName="loginOuEmail"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Senha</ion-label>
+                <ion-input type="password" formControlName="senha"></ion-input>
+              </ion-item>
+
+              <br />
+
+              <ion-item lines="none">
+                <ion-label>Lembrar senha</ion-label>
+                <ion-checkbox formControlName="lembrarSenha"></ion-checkbox>
+              </ion-item>
+
+              <ion-item lines="none" button="true">
+                <ion-label>Esqueci minha senha</ion-label>
+                <ion-icon name="key"></ion-icon>
+              </ion-item>
+              <br />
+            </form>
+            <!-- /.form -->
+
+            <ion-button color="primary" size="default" expand="block" (click)="login()" [disabled]="!loginForm.valid">
+              Entrar
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
