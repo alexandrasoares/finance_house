@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{headerName}}</ion-title>
+
+    <ion-buttons slot="primary">
+      <ion-button *ngIf="showCloseButton" (click)="close()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
