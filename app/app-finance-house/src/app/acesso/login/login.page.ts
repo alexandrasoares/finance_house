@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MenuController, NavController, ModalController } from '@ionic/angular';
 
-import { Usuario } from './../../core/models/usuario.model';
 import { AutenticacaoModel } from './../../core/models/autenticacao.model';
+import { Usuario } from './../../core/models/usuario.model';
 import { AuthService } from './../../core/services/auth.service';
 
 @Component({
@@ -16,8 +17,11 @@ export class LoginPage implements OnInit {
   loginForm: FormGroup;
 
   constructor(
+    private navController: NavController,
     private authService: AuthService,
-    private fb: FormBuilder
+    private menuController: MenuController,
+    private modalController: ModalController,
+    private fb: FormBuilder,
   ) {
     this.initForm();
   }
@@ -26,6 +30,14 @@ export class LoginPage implements OnInit {
     if (this.authService.getCredenciais() !== null){
       this.login();
     }
+  }
+
+  ionViewWillEnter() {
+    this.menuController.enable(false);
+  }
+
+  ionViewDidLeave() {
+    this.menuController.enable(true);
   }
 
   login(): void {
@@ -38,7 +50,7 @@ export class LoginPage implements OnInit {
         this.authService.salvaCredenciais(credenciais);
       }
 
-      // this.navController.navigateRoot('/home');
+      this.navController.navigateRoot('/home');
       // this.toast.showToast(`Bem vindo(a), ${this.authService.getUsuarioLogado().nome.split(' ')[0]}!`, 2000)
     },
     (err: HttpErrorResponse) => {
@@ -51,6 +63,15 @@ export class LoginPage implements OnInit {
       this.loginForm.reset();
     });
   }
+
+  // recuperarSenhaModal(): void {
+  //   this.modalController.create({
+  //     component: RecuperarSenhaComponent,
+  //     componentProps: {
+  //       'loginOuEmail': this.loginOuEmail.value
+  //     }
+  //   }).then((modal) => modal.present())
+  // }
 
   private initForm(): void {
     const credenciaisSalvas: AutenticacaoModel = this.authService.getCredenciais();

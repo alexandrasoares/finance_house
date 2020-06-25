@@ -9,10 +9,11 @@ const routes: Routes = [
     path: 'acesso',
     loadChildren: () => import('./acesso/acesso.module').then( m => m.AcessoModule)
   },
-  // {
-  //   path: 'home',
-  //   loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  // }
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  }
+
 ];
 @NgModule({
   imports: [
