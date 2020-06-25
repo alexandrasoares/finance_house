@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 
-
-import { AuthService } from '../core/services/auth.service';
-import { AutenticacaoModel } from './../core/models/autenticacao.model';
-import { Usuario } from '../core/models/usuario.model';
+import { Usuario } from './../../core/models/usuario.model';
+import { AutenticacaoModel } from './../../core/models/autenticacao.model';
+import { AuthService } from './../../core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -75,4 +74,5 @@ export class LoginPage implements OnInit {
   get lembrarSenha() {
     return this.loginForm.get('lembrarSenha');
   }
+
 }

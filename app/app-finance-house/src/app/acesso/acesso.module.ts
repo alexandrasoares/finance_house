@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { SharedModule } from './../shared/shared.module';
 import { CadastroUsuarioPage } from './cadastro-usuario/cadastro-usuario.page';
-
+import { LoginPage } from './login/login.page';
 
 @NgModule({
   imports: [
@@ -16,6 +16,7 @@ import { CadastroUsuarioPage } from './cadastro-usuario/cadastro-usuario.page';
     IonicModule,
   ],
   declarations: [
+    LoginPage,
     CadastroUsuarioPage
   ]
 })
