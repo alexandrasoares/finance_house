@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from './../shared/shared.module';
 import { LoginPage } from './login/login.page';
 import { AcessoRoutingModule } from './acesso-routing.module';
+import { RecuperarSenhaPage } from './recuperar-senha/recuperar-senha.page';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { AcessoRoutingModule } from './acesso-routing.module';
     AcessoRoutingModule
   ],
   declarations: [
-    LoginPage
+    LoginPage,
+    RecuperarSenhaPage
   ]
 })
 export class AcessoModule {}

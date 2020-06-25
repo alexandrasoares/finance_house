@@ -6,6 +6,7 @@ import { MenuController, NavController, ModalController } from '@ionic/angular';
 import { AutenticacaoModel } from './../../core/models/autenticacao.model';
 import { Usuario } from './../../core/models/usuario.model';
 import { AuthService } from './../../core/services/auth.service';
+import { RecuperarSenhaPage } from '../recuperar-senha/recuperar-senha.page';
 
 @Component({
   selector: 'app-login',
@@ -64,14 +65,14 @@ export class LoginPage implements OnInit {
     });
   }
 
-  // recuperarSenhaModal(): void {
-  //   this.modalController.create({
-  //     component: RecuperarSenhaComponent,
-  //     componentProps: {
-  //       'loginOuEmail': this.loginOuEmail.value
-  //     }
-  //   }).then((modal) => modal.present())
-  // }
+  recuperarSenhaModal(): void {
+    this.modalController.create({
+      component: RecuperarSenhaPage,
+      componentProps: {
+        ' loginOuEmail ': this.loginOuEmail.value
+      }
+    }).then((modal) => modal.present());
+  }
 
   private initForm(): void {
     const credenciaisSalvas: AutenticacaoModel = this.authService.getCredenciais();
