@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { AuthService } from './services/auth.service';
 import { MensagemToastService } from './services/mensagem-toast.service';
+import { ContaService } from './services/conta.service';
+import { LoadingService } from './services/loading.service';
+import { DataService } from './services/data.service';
+import { TipoContaService } from './services/tipo-conta.service';
 
 
 @NgModule({
@@ -11,7 +16,11 @@ import { MensagemToastService } from './services/mensagem-toast.service';
   ],
   providers: [
     AuthService,
-    MensagemToastService
+    MensagemToastService,
+    ContaService,
+    LoadingService,
+    DataService,
+    TipoContaService
   ]
 })
 export class CoreModule { }

@@ -6,6 +6,7 @@ import { ContaService } from '../core/services/conta.service';
 import { LoadingService } from '../core/services/loading.service';
 import { Movimento } from '../core/models/movimento.model';
 import { ListaMovimentosPage } from '../shared/lista-movimentos/lista-movimentos.page';
+import { DetalheSaldoPage } from './detalhe-saldo/detalhe-saldo.page';
 
 @Component({
   selector: 'app-contas',
@@ -66,6 +67,12 @@ export class ContasPage implements OnInit {
         }
       }).then((modal) => modal.present());
     });
+  }
+
+  showDetalhesSaldo(): void {
+    this.modalController.create({
+      component: DetalheSaldoPage
+    }).then((modal) => modal.present());
   }
 
 
