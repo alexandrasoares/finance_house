@@ -11,7 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { RequestInterceptor } from './core/interceptors/request.interceptor';
+// import { RequestInterceptor } from './core/interceptors/request.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +28,7 @@ import { RequestInterceptor } from './core/interceptors/request.interceptor';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],

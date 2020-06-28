@@ -29,7 +29,7 @@ export class AuthService {
 
     successfulLogin(response: HttpResponse<Usuario>): void {
         this.logado = true;
-        this.token = response.headers.get('Authorization').substr(7);
+        // this.token = response.headers.get('Authorization').substr(7);
         this.loggedAt = DataService.getNow();
 
         localStorage.setItem('usuarioLogado', JSON.stringify(response.body));

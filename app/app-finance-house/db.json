@@ -1,0 +1,65 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Alexandra",
+      "login": "SoaresAle",
+      "senha": "Soaresale22",
+      "email": "alexandra.soares@outlook.com",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Diogo",
+      "login": "Felix",
+      "senha": "Felix@22",
+      "email": "diogo@felix.com",
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Fatec Itaquaquecetuba",
+      "login": "fatec",
+      "senha": "fatec@123",
+      "email": "fatec@itaqua.com",
+      "ativo": true
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "loginOuEmail": "alexandra.soares@outlook.com",
+      "senha": "Soaresale22"
+    },
+    {
+      "id": 2,
+      "loginOuEmail": "diogo@felix.com",
+      "senha": "Felix@22"
+    },
+    {
+      "id": 3,
+      "loginOuEmail": "fatec@itaqua.com",
+      "senha": "fatec@123"
+    },
+    {
+      "loginOuEmail": "alexandra.soares@outlook.com",
+      "senha": "Soaresale22",
+      "id": 4
+    },
+    {
+      "loginOuEmail": "alexandra.soares@outlook.com",
+      "senha": "Soaresale22",
+      "id": 5
+    },
+    {
+      "loginOuEmail": "alexandra.soares@outloo.com",
+      "senha": "Soaresale22",
+      "id": 6
+    },
+    {
+      "loginOuEmail": "rejdksj@kdlkslkd",
+      "senha": "'lçld",
+      "id": 7
+    }
+  ]
+}

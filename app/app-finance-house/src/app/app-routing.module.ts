@@ -17,8 +17,6 @@ const routes: Routes = [
     path: 'contas',
     loadChildren: () => import('./contas/contas.module').then( m => m.ContasPageModule)
   }
-
-
 ];
 @NgModule({
   imports: [
