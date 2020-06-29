@@ -1,5 +1,16 @@
-<ion-content>
-  <!-- faça login -->
-  <!-- ou -->
-  <!-- cadastre-se -->
+<ion-content fullscreen>
+  <ion-car>
+    <img src="./assets/logo.png">
+    <ion-card-header>
+      <ion-card-title>
+        <p>
+          Organize a vida financeira da sua família a qualquer momento e garanta o controle dos seus gastos.
+        </p>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="abrirTelaLogin()">Já tenho login</ion-button>
+      <ion-button expand="block" (click)="abrirTelaCadastro()">Cadastre-se de graça</ion-button>
+    </ion-card-content>
+  </ion-car>
 </ion-content>
