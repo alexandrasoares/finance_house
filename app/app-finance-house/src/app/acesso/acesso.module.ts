@@ -1,3 +1,4 @@
+import { CadastroUsuarioPage } from './cadastro-usuario/cadastro-usuario.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +20,8 @@ import { RecuperarSenhaPage } from './recuperar-senha/recuperar-senha.page';
   ],
   declarations: [
     LoginPage,
-    RecuperarSenhaPage
+    RecuperarSenhaPage,
+    CadastroUsuarioPage
   ]
 })
 export class AcessoModule {}

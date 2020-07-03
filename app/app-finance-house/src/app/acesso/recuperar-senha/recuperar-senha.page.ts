@@ -49,7 +49,7 @@ export class RecuperarSenhaPage implements OnInit {
 
     this.authService.recuperaSenha(recuperarSenhaModel).subscribe(() => {
         this.recuperarSenhaForm.reset();
-        this.toast.showToast('A nova senha foi enviada para o e-mail cadastrado');
+        this.toast.showSuccessToast('A nova senha foi enviada para o e-mail cadastrado');
         this.closeModal();
     });
   }

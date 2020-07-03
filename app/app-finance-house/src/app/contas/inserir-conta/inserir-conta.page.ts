@@ -49,7 +49,7 @@ export class InserirContaPage implements OnInit {
 
     this.contaService.insert(conta).subscribe((dados: Conta) => {
       this.contaForm.reset();
-      this.toast.showToast(`Conta ${conta.nome} criada`);
+      this.toast.showSuccessToast(`Conta ${conta.nome} criada`);
     });
   }
 

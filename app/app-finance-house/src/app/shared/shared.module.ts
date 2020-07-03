@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { HomePageModule } from '../home/home.module';
 import { HeaderPage } from './header/header.page';
+import {NgPipesModule} from 'ngx-pipes';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { HeaderPage } from './header/header.page';
   imports: [
     CommonModule,
     IonicModule,
+    NgPipesModule
   ],
   exports: [
     HeaderPage

@@ -7,6 +7,7 @@ import { ContaService } from './services/conta.service';
 import { LoadingService } from './services/loading.service';
 import { DataService } from './services/data.service';
 import { TipoContaService } from './services/tipo-conta.service';
+import { CadastroService } from './services/cadastro.service';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TipoContaService } from './services/tipo-conta.service';
     ContaService,
     LoadingService,
     DataService,
-    TipoContaService
+    TipoContaService,
+    CadastroService
   ]
 })
 export class CoreModule { }

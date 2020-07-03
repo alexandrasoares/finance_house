@@ -1,3 +1,4 @@
+import { MensagemToastService } from './../../core/services/mensagem-toast.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -23,6 +24,7 @@ export class LoginPage implements OnInit {
     private menuController: MenuController,
     private modalController: ModalController,
     private fb: FormBuilder,
+    private toast: MensagemToastService,
   ) {
     this.initForm();
   }
@@ -52,17 +54,18 @@ export class LoginPage implements OnInit {
       }
 
       this.navController.navigateRoot('/home');
-      // this.toast.showToast(`Bem vindo(a), ${this.authService.getUsuarioLogado().nome.split(' ')[0]}!`, 2000)
+      // this.toast.showSuccessToast(`Bem vindo(a), ${this.authService.getUsuarioLogado().nome.split(' ')[0]}!`, 2000);
     },
-    (err: HttpErrorResponse) => {
-      // if(err.status === 403){
-      //   this.toast.showToast('Usuário ou senha incorretos')
-      // } else {
-      //   this.toast.showToast('Falha ao se comunicar com o servidor')
-      // }
+    // (err: HttpErrorResponse) => {
+    //   if (err.status === 403){
+    //     this.toast.showErrorToast('Usuário ou senha incorretos');
+    //   } else {
+    //     this.toast.showErrorToast('Falha ao se comunicar com o servidor');
+    //   }
 
-      this.loginForm.reset();
-    });
+    //   this.loginForm.reset();
+    // }
+    );
   }
 
   recuperarSenhaModal(): void {
