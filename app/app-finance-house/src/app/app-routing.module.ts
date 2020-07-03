@@ -19,6 +19,10 @@ const routes: Routes = [
   },  {
     path: 'menu-mais-opcoes',
     loadChildren: () => import('./menu-mais-opcoes/menu-mais-opcoes.module').then( m => m.MenuMaisOpcoesPageModule)
+  },
+  {
+    path: 'categorias',
+    loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
   }
 
 ];
