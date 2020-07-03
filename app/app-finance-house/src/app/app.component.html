@@ -1,6 +1,6 @@
 <ion-app>
   <ion-tabs>
-    <ion-tab-bar slot="bottom">
+    <ion-tab-bar *ngIf="isLogado()" slot="bottom">
       <ion-tab-button *ngFor="let page of appPages" [tab]="page.url">
         <ion-icon [name]="page.icon"></ion-icon>
         <ion-label>{{page.title}}</ion-label>
@@ -8,8 +8,8 @@
 
       <!-- outros-button -->
       <ion-tab-button (click)="showOtherOptions($event)">
-        <ion-icon name="share-alt"></ion-icon>
-        <ion-label>Outros</ion-label>
+        <ion-icon name="apps-outline"></ion-icon>
+        <ion-label>Mais opções</ion-label>
       </ion-tab-button>
       <!-- /.outros-button -->
     </ion-tab-bar>

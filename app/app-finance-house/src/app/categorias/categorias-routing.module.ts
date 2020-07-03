@@ -2,28 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CategoriasPage } from './categorias.page';
+import { ListaCategoriasPage } from './lista-categorias/lista-categorias.page';
+import { InserirCategoriaPage } from './inserir-categoria/inserir-categoria.page';
+import { EditarCategoriaPage } from './editar-categoria/editar-categoria.page';
+import { DetalhesCategoriaPage } from './detalhes-categoria/detalhes-categoria.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: CategoriasPage
-  },
-  {
-    path: 'detalhes-categoria',
-    loadChildren: () => import('./detalhes-categoria/detalhes-categoria.module').then( m => m.DetalhesCategoriaPageModule)
-  },
-  {
-    path: 'editar-categoria',
-    loadChildren: () => import('./editar-categoria/editar-categoria.module').then( m => m.EditarCategoriaPageModule)
-  },
-  {
-    path: 'inserir-categoria',
-    loadChildren: () => import('./inserir-categoria/inserir-categoria.module').then( m => m.InserirCategoriaPageModule)
-  },
-  {
-    path: 'lista-categorias',
-    loadChildren: () => import('./lista-categorias/lista-categorias.module').then( m => m.ListaCategoriasPageModule)
-  }
+  { path: '', redirectTo: 'lista-categorias', pathMatch: 'full' },
+  { path: 'lista-categorias', component: ListaCategoriasPage },
+  { path: 'inserir-categoria', component: InserirCategoriaPage },
+  { path: 'editar-categoria', component: EditarCategoriaPage },
+  { path: 'detalhes-categoria', component: DetalhesCategoriaPage}
 ];
 
 @NgModule({

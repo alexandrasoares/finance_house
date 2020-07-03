@@ -1,3 +1,5 @@
+import { AuthService } from './core/services/auth.service';
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 import { Platform, PopoverController } from '@ionic/angular';
@@ -14,7 +16,7 @@ export class AppComponent {
 
   appPages: {title: string, url: string, icon: string}[] = [
     { title: 'Inicio', url: 'home', icon: 'home' },
-    { title: 'Movimentos', url: 'movimentos', icon: 'list' },
+    { title: 'Movimentos', url: 'movimentos', icon: 'analytics-outline' },
     { title: 'Cartões', url: 'cartoes', icon: 'card' }
   ];
 
@@ -22,7 +24,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    private authService: AuthService,
     private popoverController: PopoverController,
+    private router: Router
     // private fcm: FCM
   ) {
     this.initializeApp();
@@ -36,9 +40,9 @@ export class AppComponent {
     });
   }
 
-  // isLogado(): boolean {
-  //   return this.authService.isLogado();
-  // }
+  isLogado(): boolean {
+    return this.authService.isLogado();
+  }
 
   showOtherOptions(ev: any): void {
     this.popoverController.create({
@@ -59,4 +63,6 @@ export class AppComponent {
   //     this.notificationService.markAsReceived(Number.parseInt(notification.id)).subscribe();
   //   })
   // }
+
+
 }

@@ -1,7 +1,5 @@
 {
-  "cadastro": [
-    
-  ],
+  "cadastro": [],
   "login": [
     {
       "id": 1,
@@ -17,6 +15,16 @@
       "id": 3,
       "loginOuEmail": "fatec@itaqua.com",
       "senha": "fatec@123"
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 4
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 5
     }
   ]
 }
