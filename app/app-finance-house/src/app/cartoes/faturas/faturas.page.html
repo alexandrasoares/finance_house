@@ -1,9 +1,53 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>faturas</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [headerName]="headerName"></app-header>
+
+<ion-content *ngIf="!hasFaturas()" padding>
+  <div class="ion-text-center">
+    <ion-icon name="warning"></ion-icon>&nbsp;
+    Este cartão de crédito ainda não tem faturas
+  </div>
+</ion-content>
 
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
+  <!-- saldo-restante -->
+  <ion-item *ngIf="hasFaturas()" lines="none">
+    <ion-label position="stacked">Saldo restante (%)</ion-label>
+    <ion-progress-bar [value]="saldoRestantePercentual" (click)="showSaldoRestante()"></ion-progress-bar>
+  </ion-item>
+  <!-- /.saldo-restante -->
+  
+  <br />
+
+  <!-- filtro -->
+  <ion-segment *ngIf="hasFaturas()" (ionChange)="onFiltroChange($event)">
+    <ion-segment-button value="nao-fechado">
+      <ion-label>Não fechada</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="a-pagar">
+      <ion-label>A pagar</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="pago">
+      <ion-label>Pago</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <!-- /.filtro -->
+
+  <br/>
+
+  <!-- faturas -->
+  <app-lista-faturas *ngIf="hasFaturas()" [faturas]="faturasFiltradas" (showMovimentosEvent)="showMovimentosModal($event)"
+    (abrirFaturaEvent)="abrirFatura($event)" (fecharFaturaEvent)="fecharFatura($event)"
+    (pagarFaturaEvent)="pagarFatura($event)">
+  </app-lista-faturas>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showInserirFaturaModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

@@ -1,3 +1,6 @@
+import { PagarFaturaPage } from './faturas/pagar-fatura/pagar-fatura.page';
+import { ListaFaturasPage } from './faturas/lista-faturas/lista-faturas.page';
+import { InserirFaturaPage } from './faturas/inserir-fatura/inserir-fatura.page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -13,7 +16,12 @@ const routes: Routes = [
   { path: 'inserir-cartao', component: InserirCartaoPage },
   { path: 'editar-cartao', component: EditarCartaoPage },
   { path: 'lista-cartao', component: ListaCartoesPage },
-  { path: 'detalhe-cartao', component: FaturasPage}
+  { path: 'detalhe-cartao', component: FaturasPage},
+  { path: 'inserir-fatura', component: InserirFaturaPage },
+  { path: 'lista-faturas', component: ListaFaturasPage },
+  { path: 'pagar-fatura', component: PagarFaturaPage },
+  { path: 'lista-cartao', component: ListaCartoesPage },
+  { path: 'detalhe-cartao', component: FaturasPage},
 ];
 
 @NgModule({

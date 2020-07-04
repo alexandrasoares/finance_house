@@ -12,6 +12,9 @@ import { InserirCartaoPage } from './inserir-cartao/inserir-cartao.page';
 import { ListaCartoesPage } from './lista-cartoes/lista-cartoes.page';
 import { FaturasPage } from './faturas/faturas.page';
 import { EditarCartaoPage } from './editar-cartao/editar-cartao.page';
+import { PagarFaturaPage } from './faturas/pagar-fatura/pagar-fatura.page';
+import { ListaFaturasPage } from './faturas/lista-faturas/lista-faturas.page';
+import { InserirFaturaPage } from './faturas/inserir-fatura/inserir-fatura.page';
 
 @NgModule({
   imports: [
@@ -27,7 +30,10 @@ import { EditarCartaoPage } from './editar-cartao/editar-cartao.page';
     InserirCartaoPage,
     EditarCartaoPage,
     ListaCartoesPage,
-    FaturasPage
+    FaturasPage,
+    InserirFaturaPage,
+    ListaFaturasPage,
+    PagarFaturaPage
   ]
 })
 export class CartoesPageModule {}
