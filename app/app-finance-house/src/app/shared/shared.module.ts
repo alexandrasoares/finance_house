@@ -7,13 +7,15 @@ import {NgPipesModule} from 'ngx-pipes';
 import { ListaMovimentosPage } from './lista-movimentos/lista-movimentos.page';
 import { AlertaPage } from './lista-movimentos/alerta/alerta.page';
 import { ListaPage } from './lista-movimentos/lista/lista.page';
+import { CartaoCreditoPipe } from '../config/pipes/cartao-credito';
 
 @NgModule({
   declarations: [
     HeaderPage,
     ListaMovimentosPage,
     AlertaPage,
-    ListaPage
+    ListaPage,
+    CartaoCreditoPipe
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { ListaPage } from './lista-movimentos/lista/lista.page';
     HeaderPage,
     ListaMovimentosPage,
     AlertaPage,
-    ListaPage
+    ListaPage,
+    CartaoCreditoPipe
   ]
 })
 export class SharedModule { }

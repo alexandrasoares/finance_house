@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'movimentos',
     loadChildren: () => import('./movimentos/movimentos.module').then( m => m.MovimentosPageModule)
+  },
+  {
+    path: 'cartoes',
+    loadChildren: () => import('./cartoes/cartoes.module').then( m => m.CartoesPageModule)
   }
 
 ];

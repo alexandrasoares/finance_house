@@ -1,10 +1,11 @@
-import { APP_CONFIG } from './../../app.config';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 import { Cartao } from '../models/cartao.model';
-import { Fatura } from '../models/fatura.model';
 import { CartaoDTO } from '../models/cartao.dto';
+import { Fatura } from '../models/fatura.model';
+import { APP_CONFIG } from './../../app.config';
 
 @Injectable()
 export class CartaoService {
@@ -38,7 +39,7 @@ export class CartaoService {
         return this.http.put<any>(`${APP_CONFIG.apiUrl}/cartoes-credito`, requestBody, { headers });
     }
 
-    deconste(cartaoId: number): Observable<any> {
+    delete(cartaoId: number): Observable<any> {
         return this.http.put<any>(`${APP_CONFIG.apiUrl}/cartoes-credito/remover/${cartaoId}`, null);
     }
 }
