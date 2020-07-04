@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>categorias</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header headerName="Categorias"></app-header>
 
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
+  <!-- credit-categories -->
+  <app-lista-categorias *ngIf="hasCategorias()" header="Crédito" [categorias]="getCategoriasCredito()" (detalhesEventEmitter)="detalhes($event)"
+    (editarEventEmitter)="editar($event)" (removerEventEmitter)="remover($event)" (showMovimentosModalEventEmitter)="showMovimentosModal($event)">
+  </app-lista-categorias>
+  <!-- /.credit-categories -->
+
+  <!-- debit-categories -->
+  <app-lista-categorias *ngIf="hasCategorias()" header="Débito" [categorias]="getCategoriasDebito()" (detalhesEventEmitter)="detalhes($event)"
+    (editarEventEmitter)="editar($event)" (removerEventEmitter)="remover($event)" (showMovimentosModalEventEmitter)="showMovimentosModal($event)">
+  </app-lista-categorias>
+  <!-- /.debit-categories -->
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/categorias/inserir']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

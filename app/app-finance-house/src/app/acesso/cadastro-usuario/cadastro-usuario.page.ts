@@ -56,13 +56,11 @@ export class CadastroUsuarioPage extends DefaultComponentBase implements OnInit,
     };
 
     this.cadastroService.insert(usuario).subscribe((dados: Usuario) => {
-      if (usuario.email === dados.email) {
-        console.log('Usuario ja existe');
-      }
       this.cadastroForm.reset();
       this.router.navigate(['/home'], { replaceUrl: true });
       this.toast.showSuccessToast(`Bem vindo ${usuario.nome}!, sua conta foi criada com sucesso!`);
       console.log('model inside', usuario);
+      console.log('model inside dados', dados);
     });
   }
 

@@ -11,6 +11,7 @@ import { DetalhesCategoriaPage } from './detalhes-categoria/detalhes-categoria.p
 import { EditarCategoriaPage } from './editar-categoria/editar-categoria.page';
 import { InserirCategoriaPage } from './inserir-categoria/inserir-categoria.page';
 import { SharedModule } from '../shared/shared.module';
+import { ListaCategoriasPage } from './lista-categorias/lista-categorias.page';
 
 @NgModule({
   imports: [
@@ -24,9 +25,9 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     CategoriasPage,
     DetalhesCategoriaPage,
-    EditarCategoriaPage,
     InserirCategoriaPage,
-    EditarCategoriaPage
+    EditarCategoriaPage,
+    ListaCategoriasPage
   ]
 })
 export class CategoriasPageModule {}
