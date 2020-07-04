@@ -1,9 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>lista-movimentos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header *ngIf="modal" (closeEventEmitter)="closeModal()" headerName="Movimentos" showCloseButton="true">
+</app-header>
 
-<ion-content>
-
+<!-- only-in-modal -->
+<ion-content *ngIf="modal && !hasMovimentos()" padding>
+  <app-alerta [emptyMovimentosMessage]="emptyMovimentosMessage"></app-alerta>
 </ion-content>
+<!-- /.only-in-modal -->
+
+<app-alerta *ngIf="!modal && !hasMovimentos()" [emptyMovimentosMessage]="emptyMovimentosMessage"></app-alerta>
+
+<!-- only-in-modal -->
+<ion-content *ngIf="modal; else noModalCase">
+  <app-lista [movimentos]="movimentos" (detalhesEventEmitter)="detalhes($event)" (editarEventEmitter)="editar($event)"
+    (removerEventEmitter)="remover($event)" (clonarEventEmitter)="clonar($event)" (alterarValorEventEmitter)="alterarValor($event)">
+  </app-lista>
+</ion-content>
+<!-- /.only-in-modal -->
+
+<ng-template #noModalCase>
+  <app-lista [movimentos]="movimentos" (detalhesEventEmitter)="detalhes($event)" (editarEventEmitter)="editar($event)"
+    (removerEventEmitter)="remover($event)" (clonarEventEmitter)="clonar($event)" (alterarValorEventEmitter)="alterarValor($event)">
+  </app-lista>
+</ng-template>

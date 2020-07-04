@@ -2,13 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
-import { HomePageModule } from '../home/home.module';
 import { HeaderPage } from './header/header.page';
 import {NgPipesModule} from 'ngx-pipes';
+import { ListaMovimentosPage } from './lista-movimentos/lista-movimentos.page';
+import { AlertaPage } from './lista-movimentos/alerta/alerta.page';
+import { ListaPage } from './lista-movimentos/lista/lista.page';
 
 @NgModule({
   declarations: [
-    HeaderPage
+    HeaderPage,
+    ListaMovimentosPage,
+    AlertaPage,
+    ListaPage
   ],
   imports: [
     CommonModule,
@@ -16,7 +21,10 @@ import {NgPipesModule} from 'ngx-pipes';
     NgPipesModule
   ],
   exports: [
-    HeaderPage
+    HeaderPage,
+    ListaMovimentosPage,
+    AlertaPage,
+    ListaPage
   ]
 })
 export class SharedModule { }
