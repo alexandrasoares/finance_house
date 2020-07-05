@@ -1,26 +1,50 @@
 {
   "cadastro": [],
-  "contas": [],
+  "contas": [
+    {
+      "nome": "",
+      "banco": "",
+      "agencia": "",
+      "conta": "",
+      "saldoInicial": "",
+      "compoemSaldo": true,
+      "id": 1
+    }
+  ],
   "tipos-conta": [
     {
       "nome": "Casa",
       "id": 1
+    },
+    {
+      "nome": "Carro",
+      "id": 2
+    },
+    {
+      "nome": "Carro",
+      "id": 3
     }
   ],
-  "categorias": [],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Teste Categoria",
+      "tipo": "C",
+      "editavel": true,
+      "ativo": true
+    }
+  ],
   "movimentos": [],
+  "subcategorias": [
+    {
+      "nome": "Teste subcategorias",
+      "id": 1
+    }
+  ],
   "projetos": [],
   "cobranca": [],
   "beneficiario": [],
   "cartoes-credito": [
-    {
-      "nome": "sss",
-      "bandeira": "sss",
-      "diaFechamento": 1,
-      "diaPagamento": 2,
-      "limite": 222,
-      "id": 1
-    },
     {
       "nome": "Bradesco",
       "bandeira": "Visa",
@@ -64,213 +88,78 @@
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 4
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 5
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 6
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 7
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 8
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 9
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 10
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 11
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 12
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 13
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 14
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 15
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 16
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 17
     },
     {
       "loginOuEmail": "aaa",
-      "senha": "aaa",
+      "senha": "aaaa",
       "id": 18
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 19
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 20
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 21
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 22
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 23
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 24
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 25
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 26
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 27
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 28
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 29
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 30
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 31
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 32
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 33
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 34
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 35
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 36
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 37
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 38
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 39
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 40
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 41
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 42
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 43
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 44
-    },
-    {
-      "loginOuEmail": "aaa",
-      "senha": "aaa",
-      "id": 45
     }
   ]
 }

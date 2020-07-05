@@ -14,7 +14,7 @@ export class ListaMovimentosPage implements OnInit {
 
   @Input() modal = false;
   @Input() movimentos: Movimento[] = [];
-  @Input() emptyMovimentosMessage = 'Não há movimentação nesta conta';
+  @Input() emptyMovimentosMessage = 'Não há registro nesta conta';
 
   constructor(
     private modalController: ModalController,

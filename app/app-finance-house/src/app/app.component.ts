@@ -15,8 +15,8 @@ import { MenuMaisOpcoesPage } from './menu-mais-opcoes/menu-mais-opcoes.page';
 export class AppComponent {
 
   appPages: {title: string, url: string, icon: string}[] = [
-    { title: 'Inicio', url: 'home', icon: 'home' },
-    { title: 'Movimentos', url: 'movimentos', icon: 'analytics-outline' },
+    // { title: 'Inicio', url: 'home', icon: 'home' },
+    { title: 'Finanças', url: 'movimentos', icon: 'stats-chart-outline' },
     { title: 'Cartões', url: 'cartoes', icon: 'card' }
   ];
 

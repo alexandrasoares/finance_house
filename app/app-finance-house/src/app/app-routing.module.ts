@@ -10,23 +10,20 @@ const routes: Routes = [
     loadChildren: () => import('./acesso/acesso.module').then( m => m.AcessoModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'movimentos',
+    loadChildren: () => import('./movimentos/movimentos.module').then( m => m.MovimentosPageModule)
   },
   {
     path: 'contas',
     loadChildren: () => import('./contas/contas.module').then( m => m.ContasPageModule)
-  },  {
+  },
+  {
     path: 'menu-mais-opcoes',
     loadChildren: () => import('./menu-mais-opcoes/menu-mais-opcoes.module').then( m => m.MenuMaisOpcoesPageModule)
   },
   {
     path: 'categorias',
     loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
-  },
-  {
-    path: 'movimentos',
-    loadChildren: () => import('./movimentos/movimentos.module').then( m => m.MovimentosPageModule)
   },
   {
     path: 'cartoes',
@@ -43,6 +40,10 @@ const routes: Routes = [
   {
     path: 'tipos-conta',
     loadChildren: () => import('./tipos-conta/tipos-conta.module').then( m => m.TiposContaPageModule)
+  },
+  {
+    path: 'subcategorias',
+    loadChildren: () => import('./subcategorias/subcategorias.module').then( m => m.SubcategoriasPageModule)
   }
 
 ];

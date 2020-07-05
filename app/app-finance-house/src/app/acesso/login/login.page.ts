@@ -53,7 +53,7 @@ export class LoginPage implements OnInit {
         this.authService.salvaCredenciais(credenciais);
       }
 
-      this.navController.navigateRoot('/home');
+      this.navController.navigateRoot('/movimentos');
       // this.toast.showSuccessToast(`Bem vindo(a), ${this.authService.getUsuarioLogado().nome.split(' ')[0]}!`, 2000);
     },
     // (err: HttpErrorResponse) => {

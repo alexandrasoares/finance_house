@@ -1,4 +1,3 @@
-import { APP_CONFIG } from './../../app.config';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,6 +7,7 @@ import { Categoria } from '../models/categoria.model';
 import { CategoriaDTO } from '../models/categoria.dto';
 import { Subcategoria } from '../models/subcategoria.model';
 import { Movimento } from '../models/movimento.model';
+import { APP_CONFIG } from './../../app.config';
 
 @Injectable()
 export class CategoriaService {

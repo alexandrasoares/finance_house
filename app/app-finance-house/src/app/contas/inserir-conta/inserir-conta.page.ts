@@ -23,7 +23,9 @@ export class InserirContaPage implements OnInit {
     private toast: MensagemToastService,
     private fb: FormBuilder,
     private tipoContaService: TipoContaService,
-  ) { }
+  ) {
+    this.initForm();
+  }
 
   ngOnInit() {
   }
@@ -44,7 +46,9 @@ export class InserirContaPage implements OnInit {
       conta: this.conta.value,
       saldoInicial: this.saldoInicial.value,
       compoemSaldo: this.compoemSaldo.value,
-      // tipo: this.tiposConta.find((t: TipoConta) => t.id === this.tipo.value);
+      tipo: this.tiposConta.find((
+        t: TipoConta) => t.id === this.tipo.value
+      )
     };
 
     this.contaService.insert(conta).subscribe((dados: Conta) => {

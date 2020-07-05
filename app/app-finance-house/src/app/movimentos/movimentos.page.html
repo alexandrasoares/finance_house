@@ -1,4 +1,4 @@
-<app-header headerName="Movimentos"></app-header>
+<app-header headerName="Registro de contas"></app-header>
 
 <!-- search-bar -->
 <ion-toolbar>
@@ -9,7 +9,7 @@
 
 <!--filters-fab-button -->
 <ion-fab horizontal="end" vertical="top" slot="fixed">
-  <ion-fab-button *ngIf="!isFiltroRapidoAtivo" color="dark">
+  <ion-fab-button *ngIf="!isFiltroRapidoAtivo" color="primary">
     <ion-icon name="search"></ion-icon>
   </ion-fab-button>
 
@@ -42,16 +42,16 @@
   <br />
 
   <app-lista-movimentos [modal]="false" [movimentos]="movimentosFiltrados"
-    emptyMovimentosMessage="Nenhum movimento encontrado"></app-lista-movimentos>
+    emptyMovimentosMessage="Nenhum registro encontrado"></app-lista-movimentos>
 
   <!-- <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event)">
     <ion-infinite-scroll-content loadingSpinner="dots" loadingText="Carregando..">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll> -->
 
-  <ion-button *ngIf="!isFiltroRapidoAtivo && hasMovimentos()" color="primary" size="default" expand="full" (click)="carregarMais()">
+  <!-- <ion-button *ngIf="!isFiltroRapidoAtivo && hasMovimentos()" color="" size="default" expand="full" (click)="carregarMais()">
     Carregar mais
-  </ion-button>
+  </ion-button> -->
 
   <!-- add-fab-button -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">

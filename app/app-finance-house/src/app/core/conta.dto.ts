@@ -1,3 +1,5 @@
+import { TipoConta } from './models/tipo-conta.model';
+
 export interface ContaDTO {
     nome: string;
     banco: string;
@@ -5,4 +7,5 @@ export interface ContaDTO {
     conta: string;
     saldoInicial: number;
     compoemSaldo: boolean;
+    tipo: TipoConta;
 }

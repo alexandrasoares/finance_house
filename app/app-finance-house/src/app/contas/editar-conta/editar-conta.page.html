@@ -1,4 +1,4 @@
-<app-page-header headerName="Nova conta"></app-page-header>
+<app-header headerName="Editar conta"></app-header>
 
 <ion-content padding>
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
@@ -14,7 +14,7 @@
 
       <ion-item>
         <ion-label position="stacked">Tipo</ion-label>
-        <ion-select placeholder="Selecione" formControlName="tipo">
+        <ion-select placeholder="(Selecione)" formControlName="tipo">
           <ion-select-option *ngFor="let tipo of tiposConta" [value]="tipo.id">{{tipo.nome}}</ion-select-option>
         </ion-select>
       </ion-item>
@@ -32,6 +32,10 @@
         <ion-input formControlName="conta"></ion-input>
       </ion-item>
       <ion-item>
+          <ion-label position="stacked">Saldo</ion-label>
+          <ion-input formControlName="saldo"></ion-input>
+        </ion-item>
+      <ion-item>
         <ion-label position="stacked">Saldo inicial</ion-label>
         <ion-input type="number" formControlName="saldoInicial"></ion-input>
       </ion-item>
@@ -42,8 +46,8 @@
     </form>
   </ion-list>
 
-  <ion-button (click)="inserir()" class="ion-float-right">
-    Salvar
+  <ion-button [disabled]="!contaForm.valid" (click)="atualizar()" class="ion-float-right">
+    Atualizar
     <ion-icon slot="end" name="checkmark"></ion-icon>
   </ion-button>
 </ion-content>

@@ -10,6 +10,7 @@ import { ContasPage } from './contas.page';
 import { SharedModule } from '../shared/shared.module';
 import { DetalheSaldoPage } from './detalhe-saldo/detalhe-saldo.page';
 import { ListaContasPage } from './lista-contas/lista-contas.page';
+import { EditarContaPage } from './editar-conta/editar-conta.page';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ListaContasPage } from './lista-contas/lista-contas.page';
   declarations: [
     ContasPage,
     DetalheSaldoPage,
-    ListaContasPage
+    ListaContasPage,
+    EditarContaPage
   ]
 })
 export class ContasPageModule {}

@@ -1,3 +1,5 @@
+import { TipoConta } from './tipo-conta.model';
+
 export interface Conta {
     id: number;
     nome: string;
@@ -8,4 +10,5 @@ export interface Conta {
     saldo: number;
     compoemSaldo: boolean;
     ativo: boolean;
+    tipo: TipoConta;
 }
