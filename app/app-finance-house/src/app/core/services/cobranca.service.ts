@@ -1,12 +1,12 @@
-import { CobrancaDTO } from './../models/cobranca.dto';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Cobranca } from '../models/cobranca.model';
 import { APP_CONFIG } from './../../app.config';
 import { CobrancaPagamentoDTO } from '../models/cobranca-pagamento.dto';
 import { CobrancaRemocaoDTO } from '../models/cobranca-remocao.dto';
+import { CobrancaDTO } from './../models/cobranca.dto';
 
 @Injectable()
 export class CobrancaService {

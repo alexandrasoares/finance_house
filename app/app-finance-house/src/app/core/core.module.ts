@@ -16,6 +16,8 @@ import { CategoriaService } from './services/categoria.service';
 import { CartaoService } from './services/cartao.service';
 import { GeracaoTokenAuthService } from './services/geracao-token-auth.service';
 import { RequisicaoHttpService } from './services/requisicao-http.service';
+import { CobrancaService } from './services/cobranca.service';
+import { BeneficiarioService } from './services/beneficiario.service';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { RequisicaoHttpService } from './services/requisicao-http.service';
     CartaoService,
     GeracaoTokenAuthService,
     RequisicaoHttpService,
-    ServiceBase
+    ServiceBase,
+    CobrancaService,
+    BeneficiarioService
   ]
 })
 export class CoreModule { }

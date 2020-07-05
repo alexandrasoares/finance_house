@@ -35,6 +35,14 @@ const routes: Routes = [
   {
     path: 'cobrancas',
     loadChildren: () => import('./cobrancas/cobrancas.module').then( m => m.CobrancasPageModule)
+  },
+  {
+    path: 'beneficiario',
+    loadChildren: () => import('./beneficiario/beneficiario.module').then( m => m.BeneficiarioPageModule)
+  },
+  {
+    path: 'tipos-conta',
+    loadChildren: () => import('./tipos-conta/tipos-conta.module').then( m => m.TiposContaPageModule)
   }
 
 ];

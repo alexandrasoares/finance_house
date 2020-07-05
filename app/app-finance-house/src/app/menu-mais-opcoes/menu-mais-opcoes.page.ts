@@ -10,8 +10,8 @@ export class MenuMaisOpcoesPage implements OnInit {
     {title: 'Contas', icon: 'bookmarks', link: '/contas'},
     {title: 'Categorias', icon: 'pricetag', link: '/categorias'},
     {title: 'Subcategorias', icon: 'pricetags', link: '/subcategorias'},
-    // {title: 'Tipos de conta', icon: 'document', link: '/tipos-conta'},
-    // {title: 'Projetos', icon: 'briefcase', link: '/projetos'},
+    {title: 'Tipos de conta', icon: 'document', link: '/tipos-conta'},
+    {title: 'Projetos', icon: 'briefcase', link: '/projetos'},
     {title: 'Beneficiários', icon: 'contacts', link: '/beneficiarios'},
     // {title: 'Corretoras', icon: 'business', link: '/corretoras'}
   ];

@@ -33,7 +33,7 @@ export class BeneficiarioService {
         return this.http.put(`${APP_CONFIG.apiUrl}/beneficiarios`, requestBody, { headers });
     }
 
-    deconste(beneficiarioId: number): Observable<any> {
+    delete(beneficiarioId: number): Observable<any> {
         return this.http.put(`${APP_CONFIG.apiUrl}/beneficiarios/remover/${beneficiarioId}`, null);
     }
 }

@@ -1,9 +1,17 @@
 {
   "cadastro": [],
   "contas": [],
+  "tipos-conta": [
+    {
+      "nome": "Casa",
+      "id": 1
+    }
+  ],
   "categorias": [],
   "movimentos": [],
   "projetos": [],
+  "cobranca": [],
+  "beneficiario": [],
   "cartoes-credito": [
     {
       "nome": "sss",
@@ -213,6 +221,56 @@
       "loginOuEmail": "aaa",
       "senha": "aaa",
       "id": 35
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 36
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 37
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 38
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 39
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 40
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 41
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 42
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 43
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 44
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaa",
+      "id": 45
     }
   ]
 }
