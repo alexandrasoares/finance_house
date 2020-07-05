@@ -1,10 +1,10 @@
-import { InserirContaPage } from './inserir-conta/inserir-conta.page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DetalheSaldoPage } from './detalhe-saldo/detalhe-saldo.page';
 import { ListaContasPage } from './lista-contas/lista-contas.page';
 import { ContasPage } from './contas.page';
+import { InserirContaPage } from './inserir-conta/inserir-conta.page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'contas', pathMatch: 'full' },

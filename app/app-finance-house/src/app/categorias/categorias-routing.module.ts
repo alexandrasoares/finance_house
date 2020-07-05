@@ -8,7 +8,8 @@ import { EditarCategoriaPage } from './editar-categoria/editar-categoria.page';
 import { DetalhesCategoriaPage } from './detalhes-categoria/detalhes-categoria.page';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'lista-categorias', pathMatch: 'full' },
+  { path: '', redirectTo: 'categorias', pathMatch: 'full' },
+  { path: 'categorias', component: ListaCategoriasPage },
   { path: 'lista-categorias', component: ListaCategoriasPage },
   { path: 'inserir-categoria', component: InserirCategoriaPage },
   { path: 'editar-categoria', component: EditarCategoriaPage },

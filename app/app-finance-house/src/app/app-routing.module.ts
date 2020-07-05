@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'cartoes',
     loadChildren: () => import('./cartoes/cartoes.module').then( m => m.CartoesPageModule)
+  },
+  {
+    path: 'cobrancas',
+    loadChildren: () => import('./cobrancas/cobrancas.module').then( m => m.CobrancasPageModule)
   }
 
 ];

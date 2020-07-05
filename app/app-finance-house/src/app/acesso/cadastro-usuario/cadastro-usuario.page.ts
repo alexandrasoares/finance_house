@@ -30,7 +30,6 @@ export class CadastroUsuarioPage extends DefaultComponentBase implements OnInit,
 
   ngOnInit() {
     this.componenteAtivo = true;
-    console.log('show me your model', this.model);
   }
 
   ngOnDestroy(): void {

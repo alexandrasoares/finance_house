@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { CartaoDTO } from './../../core/models/cartao.dto';
 import { Cartao } from './../../core/models/cartao.model';
@@ -19,7 +20,8 @@ export class InserirCartaoPage implements OnInit {
   constructor(
     private fb: FormBuilder,
     private cartaoService: CartaoService,
-    private toast: MensagemToastService
+    private toast: MensagemToastService,
+    private router: Router,
   ) {
     this.initForm();
   }
@@ -38,6 +40,7 @@ export class InserirCartaoPage implements OnInit {
 
     this.cartaoService.insert(cartao).subscribe((dados: Cartao) => {
       this.cartaoForm.reset();
+      this.router.navigate(['/cartoes'], { replaceUrl: true });
       this.toast.showSuccessToast(`Cartão ${cartao.nome} criado`);
     });
   }
