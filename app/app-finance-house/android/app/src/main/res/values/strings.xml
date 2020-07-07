@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">app-finance-house</string>
-    <string name="title_activity_main">app-finance-house</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">Finance House</string>
+    <string name="title_activity_main">Finance House</string>
+    <string name="package_name">com.alexandra.financeHouse</string>
+    <string name="custom_url_scheme">com.alexandra.financeHouse</string>
 </resources>

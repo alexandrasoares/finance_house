@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   baseAssets: '',
 
-  apiUrl: 'http://localhost:3000/'
+  apiUrl: 'https://192.168.43.59:3000'
 };
 
 /*

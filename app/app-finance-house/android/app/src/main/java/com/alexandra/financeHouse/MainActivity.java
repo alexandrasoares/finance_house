@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.alexandra.financeHouse;
 
 import android.os.Bundle;
 

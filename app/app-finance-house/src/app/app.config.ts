@@ -1,5 +1,5 @@
 export const APP_CONFIG  = {
-    apiUrl: 'http://localhost:3000',
+    apiUrl: 'https://192.168.43.59:3000',
     externalsApis: {
         hgBrasil: {
             apiUrl: 'https://api.hgbrasil.com/finance',
