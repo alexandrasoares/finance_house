@@ -1,0 +1,172 @@
+{
+    "usuario": [
+        {
+            "id": 1,
+            "nome": "Alexandra Soares",
+            "email": "alexandra.soares@outlook.com",
+            "senha": "soaresale22",
+            "ativo": true,
+            "tipo": "ADM"
+        },
+        {
+            "id": 2,
+            "nome": "Diogo Felix",
+            "email": "diogo.felix@outlook.com",
+            "senha": "felixdiogo22",
+            "ativo": true,
+            "tipo": "Usuario"
+        },
+        {
+            "id": 3,
+            "nome": "Fatec Itaqua",
+            "email": "fatec.itaqua@outlook.com",
+            "senha": "fatecItaqua123",
+            "ativo": true,
+            "tipo": "Usuario"
+        },
+        {
+            "id": 4,
+            "nome": "Teste TCC",
+            "email": "teste.tcc@outlook.com",
+            "senha": "teste1234",
+            "ativo": true,
+            "tipo": "Usuario"
+        }
+    ],
+
+    "tipo-conta": [
+        {
+            "id": 1,
+            "nome": "Casa",
+            "ativo": true
+        },
+        {
+            "id": 2,
+            "nome": "Carro",
+            "ativo": true
+        },
+        {
+            "id": 3,
+            "nome": "Crianças",
+            "ativo": true
+        },
+        {
+            "id": 4,
+            "nome": "Viagens",
+            "ativo": true
+        }
+    ],
+
+    "cartao": [
+        {
+            "id": 1,
+            "nome": "Itaú",
+            "bandeira": "Mastercard",
+            "diaFechamento": 27,
+            "diaPagamento": 5,
+            "limite": 1000,
+            "ativo": true
+        },
+
+        {
+            "id": 2,
+            "nome": "Bradesco",
+            "bandeira": "Elo",
+            "diaFechamento": 25,
+            "diaPagamento": 1,
+            "limite": 1500,
+            "ativo": true
+        },
+
+        {
+            "id": 3,
+            "nome": "Next",
+            "bandeira": "Visa",
+            "diaFechamento": 30,
+            "diaPagamento": 10,
+            "limite": 2300,
+            "ativo": true
+        },
+
+        {
+            "id": 4,
+            "nome": "Nubank",
+            "bandeira": "Mastercard",
+            "diaFechamento": 27,
+            "diaPagamento": 5,
+            "limite": 1700,
+            "ativo": true
+        }
+    ],
+
+    "categoria": [
+        {
+            "id": 1, 
+            "nome": "Alimentação", 
+            "tipo": "Débito", 
+            "editavel": true, 
+            "ativo": true
+        },
+
+        {
+            "id": 2, 
+            "nome": "Assinaturas e serviços", 
+            "tipo": "Credito", 
+            "editavel": true, 
+            "ativo": true
+        },
+
+        {
+            "id": 3, 
+            "nome": "Compras", 
+            "tipo": "Débito", 
+            "editavel": true, 
+            "ativo": true
+        },
+
+        {
+            "id": 4, 
+            "nome": "Remédios e Farmácia", 
+            "tipo": "Crédito", 
+            "editavel": true, 
+            "ativo": true
+        },
+
+        {
+            "id": 5, 
+            "nome": "Impostos e Taxas", 
+            "tipo": "Débito", 
+            "editavel": true, 
+            "ativo": true
+        },
+
+        {
+            "id": 6, 
+            "nome": "Educação", 
+            "tipo": "Crédito", 
+            "editavel": true, 
+            "ativo": true
+        },
+
+        {
+            "id": 7, 
+            "nome": "Lazer e Hobbies", 
+            "tipo": "Crédito", 
+            "editavel": true, 
+            "ativo": true
+        }
+    ],
+
+    "movimento": [
+        {
+            "descricao": "Conta de água",
+            "tipo": "Débito",
+            "dataContabilizacao": "07/07/2020",
+            "valor": 58,
+            "acrescimo": 0,
+            "decrescimo": 0,
+            "status": "Agendado",
+            "observacao": "Conta paga em dia"
+        }
+    ]
+}

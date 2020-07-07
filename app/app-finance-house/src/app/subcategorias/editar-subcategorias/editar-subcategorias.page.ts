@@ -48,14 +48,14 @@ export class EditarSubcategoriasPage implements OnInit {
     });
   }
 
-  onTipoChanges(): void {
-    if (this.tipo.value !== null){
-      this.categoriaService.getAllByTipo(this.tipo.value).subscribe((dados: Categoria[]) => {
-        this.categoriasDisponiveis = dados;
-        this.categoria.enable();
-      });
-    }
-  }
+  // onTipoChanges(): void {
+  //   if (this.tipo.value !== null){
+  //     this.categoriaService.getAllByTipo(this.tipo.value).subscribe((dados: Categoria[]) => {
+  //       this.categoriasDisponiveis = dados;
+  //       this.categoria.enable();
+  //     });
+  //   }
+  // }
 
   private initForm(): void {
     this.subcategoriaForm = this.fb.group({

@@ -19,7 +19,7 @@
 
   <ion-fab-list>
     <ion-fab-button color="light" (click)="filtraPorPeriodo('mesPassado')">
-      <ion-icon name="return-left"></ion-icon>
+      <ion-icon name="arrow-undo-outline"></ion-icon>
     </ion-fab-button>
 
     <ion-fab-button color="light" (click)="filtraPorPeriodo('esteMes')">
@@ -27,7 +27,7 @@
     </ion-fab-button>
 
     <ion-fab-button color="light" (click)="filtraPorPeriodo('proximoMes')">
-      <ion-icon name="return-right"></ion-icon>
+      <ion-icon name="arrow-redo-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab-list>
 </ion-fab>
@@ -54,6 +54,7 @@
   </ion-button> -->
 
   <!-- add-fab-button -->
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button [routerLink]="['/movimentos/inserir-movimentos']">
       <ion-icon name="add"></ion-icon>

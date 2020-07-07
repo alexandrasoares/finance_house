@@ -114,13 +114,13 @@ export class EditarMovimentosPage implements OnInit {
     this.subcategoria.setValue('');
     this.subcategoria.disable();
 
-    this.categoriaService.getAllByTipo(tipo).subscribe((dados: Categoria[]) => {
-      this.categorias = dados;
+    // this.categoriaService.getAllByTipo(tipo).subscribe((dados: Categoria[]) => {
+    //   this.categorias = dados;
 
-      if (dados.length === 0){
-        this.toast.showErrorToast('Nenhuma categoria cadastrada para este tipo de movimento');
-      }
-    });
+    //   if (dados.length === 0){
+    //     this.toast.showErrorToast('Nenhuma categoria cadastrada para este tipo de movimento');
+    //   }
+    // });
   }
 
   onCategoriaChange(): void {

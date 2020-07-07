@@ -7,7 +7,6 @@ import { UsuarioDTO } from './../../core/usuario.dto';
 import { DefaultComponentBase } from './../../config/default-component.base';
 import { CadastroService } from './../../core/services/cadastro.service';
 import { MensagemToastService } from './../../core/services/mensagem-toast.service';
-
 @Component({
   selector: 'app-cadastro-usuario',
   templateUrl: './cadastro-usuario.page.html',
@@ -56,10 +55,8 @@ export class CadastroUsuarioPage extends DefaultComponentBase implements OnInit,
 
     this.cadastroService.insert(usuario).subscribe((dados: Usuario) => {
       this.cadastroForm.reset();
-      this.router.navigate(['/home'], { replaceUrl: true });
+      this.router.navigate(['acesso/login']);
       this.toast.showSuccessToast(`Bem vindo ${usuario.nome}!, sua conta foi criada com sucesso!`);
-      console.log('model inside', usuario);
-      console.log('model inside dados', dados);
     });
   }
 

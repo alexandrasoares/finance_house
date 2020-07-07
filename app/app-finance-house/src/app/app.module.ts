@@ -22,7 +22,7 @@ import { CoreModule } from './core/core.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     StatusBar,

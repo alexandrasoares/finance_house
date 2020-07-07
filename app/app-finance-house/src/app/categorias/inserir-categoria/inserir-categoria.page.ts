@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { Categoria } from './../../core/models/categoria.model';
 import { CategoriaDTO } from './../../core/models/categoria.dto';
@@ -18,7 +19,8 @@ export class InserirCategoriaPage implements OnInit {
   constructor(
     private fb: FormBuilder,
     private categoriaService: CategoriaService,
-    private toast: MensagemToastService
+    private toast: MensagemToastService,
+    private router: Router
   ) {
     this.initForm();
   }
@@ -29,7 +31,7 @@ export class InserirCategoriaPage implements OnInit {
   private initForm(): void {
     this.categoriaForm = this.fb.group({
       nome: ['', Validators.required],
-      tipo: ['', Validators.required],
+      tipo: ['', Validators],
     });
   }
 
@@ -37,6 +39,7 @@ export class InserirCategoriaPage implements OnInit {
     const categoria: CategoriaDTO = { nome: this.nome.value, tipo: this.tipo.value};
 
     this.categoriaService.insert(categoria).subscribe((categoriaGerada: Categoria) => {
+      this.router.navigate(['/categorias'], { replaceUrl: true});
       this.toast.showSuccessToast(`Categoria ${categoria.nome} salva`);
       this.categoriaForm.reset();
     });

@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inserir-categoria</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header headerName="Nova categoria"></app-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-list>
+    <form [formGroup]="categoriaForm">
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input formControlName="nome"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label position="stacked">Tipo</ion-label>
+        <ion-select placeholder="(Selecione)" formControlName="tipo">
+          <ion-select-option value="C">Crédito</ion-select-option>
+          <ion-select-option value="D">Débito</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <ion-button [disabled]="!categoriaForm.valid" (click)="inserir()" class="ion-float-right">
+    Salvar
+    <ion-icon slot="end" name="checkmark"></ion-icon>
+  </ion-button>
 </ion-content>

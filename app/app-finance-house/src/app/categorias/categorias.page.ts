@@ -31,16 +31,12 @@ export class CategoriasPage implements OnInit {
   }
 
   private loadData(event: any = null): void {
-    this.loading.showLoading('Carregando..');
-
     this.categoriaService.getAll().subscribe((dados: Categoria[]) => {
       this.categorias = dados;
 
       if (event !== null){
         event.target.complete();
       }
-
-      this.loading.dismissLoading();
     });
   }
 

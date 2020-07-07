@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -22,7 +23,8 @@ export class InserirSubcategoriasPage implements OnInit {
     private fb: FormBuilder,
     private categoriaService: CategoriaService,
     private subcategoriaService: SubcategoriaService,
-    private toast: MensagemToastService
+    private toast: MensagemToastService,
+    private router: Router
   ) {
     this.initForm();
   }
@@ -30,14 +32,14 @@ export class InserirSubcategoriasPage implements OnInit {
   ngOnInit() {
   }
 
-  onTipoChanges(): void {
-    if (this.tipo.value !== null){
-      this.categoriaService.getAllByTipo(this.tipo.value).subscribe((dados: Categoria[]) => {
-        this.categoriasDisponiveis = dados;
-        this.categoria.enable();
-      });
-    }
-  }
+  // onTipoChanges(): void {
+  //   if (this.tipo.value !== null){
+  //     this.categoriaService.getAllByTipo(this.tipo.value).subscribe((dados: Categoria[]) => {
+  //       this.categoriasDisponiveis = dados;
+  //       this.categoria.enable();
+  //     });
+  //   }
+  // }
 
   inserir(): void {
     const subcategoria: SubcategoriaDTO = {
@@ -46,6 +48,8 @@ export class InserirSubcategoriasPage implements OnInit {
     };
 
     this.subcategoriaService.insert(subcategoria).subscribe((dados: Subcategoria) => {
+      this.router.navigate(['/subcategorias'], { replaceUrl: true });
+
       this.toast.showSuccessToast(`Subcategoria ${dados.nome} criada com sucesso`);
       this.subcategoriaForm.reset();
     });

@@ -18,9 +18,9 @@ export class CategoriaService {
         return this.http.get<Categoria[]>(`${APP_CONFIG.apiUrl}/categorias`);
     }
 
-    getAllByTipo(tipo: string): Observable<Categoria[]> {
-        return this.http.get<Categoria[]>(`${APP_CONFIG.apiUrl}/categorias/tipo?tipo=${tipo}`);
-    }
+    // getAllByTipo(tipo: string): Observable<Categoria[]> {
+    //     return this.http.get<Categoria[]>(`${APP_CONFIG.apiUrl}/categorias/tipo?tipo=${tipo}`);
+    // }
 
     getById(categoriaId: number): Observable<Categoria> {
         return this.http.get<Categoria>(`${APP_CONFIG.apiUrl}/categorias/${categoriaId}`);

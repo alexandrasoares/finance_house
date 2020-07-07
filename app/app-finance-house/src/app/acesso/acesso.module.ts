@@ -1,3 +1,4 @@
+import { InicioPage } from './inicio/inicio.page';
 import { CadastroUsuarioPage } from './cadastro-usuario/cadastro-usuario.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,7 +22,8 @@ import { RecuperarSenhaPage } from './recuperar-senha/recuperar-senha.page';
   declarations: [
     LoginPage,
     RecuperarSenhaPage,
-    CadastroUsuarioPage
+    CadastroUsuarioPage,
+    InicioPage
   ]
 })
 export class AcessoModule {}

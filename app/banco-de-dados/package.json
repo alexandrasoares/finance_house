@@ -1,0 +1,14 @@
+{
+  "name": "banco-de-dados",
+  "version": "1.0.0",
+  "description": "banco-finance-house",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/json-server/bin --watch db.json --port 1000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}

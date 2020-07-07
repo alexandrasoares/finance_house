@@ -9,7 +9,7 @@ import { DetalhesCategoriaPage } from './detalhes-categoria/detalhes-categoria.p
 
 const routes: Routes = [
   { path: '', redirectTo: 'categorias', pathMatch: 'full' },
-  { path: 'categorias', component: ListaCategoriasPage },
+  { path: 'categorias', component: CategoriasPage },
   { path: 'lista-categorias', component: ListaCategoriasPage },
   { path: 'inserir-categoria', component: InserirCategoriaPage },
   { path: 'editar-categoria', component: EditarCategoriaPage },

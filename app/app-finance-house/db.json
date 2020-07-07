@@ -1,5 +1,102 @@
 {
-  "cadastro": [],
+  "cadastro": [
+    {
+      "nome": "teste",
+      "email": "teste@teste.com",
+      "senha": "teste",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "email": "teste2@teste",
+      "senha": "ss",
+      "id": 2
+    },
+    {
+      "nome": "sss",
+      "email": "sss@asss",
+      "senha": "sss",
+      "id": 3
+    },
+    {
+      "nome": "aaa",
+      "email": "aaa@aaa",
+      "senha": "aaaa",
+      "id": 4
+    },
+    {
+      "nome": "ase",
+      "email": "asd@rs",
+      "senha": "sss",
+      "id": 5
+    },
+    {
+      "nome": "sar",
+      "email": "dsd@fdfg",
+      "senha": "ddd",
+      "id": 6
+    },
+    {
+      "nome": "aaa",
+      "email": "aaa@ddd",
+      "senha": "ddd",
+      "id": 7
+    },
+    {
+      "nome": "aa",
+      "email": "ss@dd",
+      "senha": "ddd",
+      "id": 8
+    },
+    {
+      "nome": "jgjhj",
+      "email": "ddd@dksk",
+      "senha": "kdlkdlk",
+      "id": 9
+    },
+    {
+      "nome": "aaa",
+      "email": "aaa@ddd",
+      "senha": "ddd",
+      "id": 10
+    },
+    {
+      "nome": "aaa",
+      "email": "aaa@tttd",
+      "senha": "ddd",
+      "id": 11
+    },
+    {
+      "nome": "aaa",
+      "email": "ss@fff",
+      "senha": "ddd",
+      "id": 12
+    },
+    {
+      "nome": "aaa",
+      "email": "sss@ttt",
+      "senha": "ddd",
+      "id": 13
+    },
+    {
+      "nome": "sss",
+      "email": "sdf3f@ffg",
+      "senha": "ggg",
+      "id": 14
+    },
+    {
+      "nome": "ggg",
+      "email": "ggg@rrr",
+      "senha": "fff",
+      "id": 15
+    },
+    {
+      "nome": "aaa",
+      "email": "aaa@sss",
+      "senha": "ssss",
+      "id": 16
+    }
+  ],
   "contas": [
     {
       "nome": "",
@@ -34,7 +131,52 @@
       "ativo": true
     }
   ],
-  "movimentos": [],
+  "movimentos": [
+    {
+      "descricao": "Gás",
+      "tipo": "D",
+      "dataContabilizacao": "06/08/2020",
+      "valor": 80,
+      "acrescimo": 0,
+      "decrescimo": 0,
+      "status": "AGENDADO",
+      "observacao": "Pagamento do gás a cada 2 meses",
+      "id": 1
+    },
+    {
+      "descricao": "Conta telefônica",
+      "tipo": "D",
+      "dataContabilizacao": "07/09/2020",
+      "valor": 120,
+      "acrescimo": 0,
+      "decrescimo": 0,
+      "status": "AGENDADO",
+      "observacao": "Conta mensal",
+      "id": 2
+    },
+    {
+      "descricao": "Aluguel",
+      "tipo": "D",
+      "dataContabilizacao": "07/07/2020",
+      "valor": 1300,
+      "acrescimo": 0,
+      "decrescimo": 0,
+      "status": "EFETIVADO",
+      "observacao": "Aluguel do mes 7 pago.",
+      "id": 3
+    },
+    {
+      "descricao": "Supermercado",
+      "tipo": "D",
+      "dataContabilizacao": "07/07/2020",
+      "valor": 900,
+      "acrescimo": 0,
+      "decrescimo": 0,
+      "status": "EFETIVADO",
+      "observacao": "Compra de mantimentos mensal.",
+      "id": 4
+    }
+  ],
   "subcategorias": [
     {
       "nome": "Teste subcategorias",
@@ -160,6 +302,36 @@
       "loginOuEmail": "aaa",
       "senha": "aaaa",
       "id": 18
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaaa",
+      "id": 19
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaaa",
+      "id": 20
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaaa",
+      "id": 21
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaaa",
+      "id": 22
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaaa",
+      "id": 23
+    },
+    {
+      "loginOuEmail": "aaa",
+      "senha": "aaaa",
+      "id": 24
     }
   ]
 }

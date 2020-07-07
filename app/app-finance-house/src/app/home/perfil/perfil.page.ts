@@ -50,7 +50,7 @@ export class PerfilPage implements OnInit {
 
   private loadData(): void {
     this.usuario = this.authService.getUsuarioLogado();
-    // this.usuario.tipo = Usuario.transformTipo(this.usuario.tipo);
+    this.usuario.tipo = Usuario.transformTipo(this.usuario.tipo);
   }
 
 }

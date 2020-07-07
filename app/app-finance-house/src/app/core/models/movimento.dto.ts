@@ -14,9 +14,9 @@ export interface MovimentoDTO {
     status: string;
     observacao: string;
 
-    conta: Conta;
-    categoria: Categoria;
-    subcategoria: Subcategoria;
-    projeto: Projeto;
-    fatura: Fatura;
+    conta?: Conta;
+    categoria?: Categoria;
+    subcategoria?: Subcategoria;
+    projeto?: Projeto;
+    fatura?: Fatura;
 }
