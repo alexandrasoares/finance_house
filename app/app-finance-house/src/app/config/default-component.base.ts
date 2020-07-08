@@ -20,10 +20,6 @@ export class DefaultComponentBase {
         // this.mensagemToastService = ServiceLocator.injector.get(MensagemToastService);
     }
 
-    public retornarUrlAssets(asset: string): string {
-        return environment.baseAssets + asset;
-    }
-
     public mostrarMsgErro(mensagem: string): void {
       this.mensagemToastService.showErrorToast(mensagem);
     }

@@ -4,7 +4,7 @@
   "description": "banco-finance-house",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch db.json"
+    "start": ""
   },
   "author": "",
   "license": "ISC",

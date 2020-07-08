@@ -12,7 +12,6 @@ export class AuthInterceptor implements HttpInterceptor {
   urlsInjetarToken: string[];
 
   constructor(private injector: Injector) {
-    this.urlsInjetarToken = [environment.apiUrl];
   }
 
   intercept(requisicaoOriginal: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

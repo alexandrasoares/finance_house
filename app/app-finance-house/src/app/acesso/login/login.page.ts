@@ -63,7 +63,7 @@ export class LoginPage implements OnInit {
     //     this.toast.showErrorToast('Falha ao se comunicar com o servidor');
     //   }
 
-    //   this.loginForm.reset();
+        // this.loginForm.reset();
     // }
     );
   }

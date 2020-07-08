@@ -12,7 +12,7 @@ export class BeneficiarioService {
     }
 
     getAll(): Observable<Beneficiario[]> {
-        return this.http.get<Beneficiario[]>(`${APP_CONFIG.apiUrl}/beneficiarios`);
+        return this.http.get<Beneficiario[]>(`${APP_CONFIG}/beneficiarios`);
     }
 
     getById(beneficiarioId: number): Observable<Beneficiario> {

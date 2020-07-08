@@ -10,10 +10,6 @@ export class ServiceBase {
     .set('Pragma', 'no-cache')
     .set('Expires', new Date(new Date().getTime() + 600).toUTCString());
 
-  public getBaseUrl(rota: string): string {
-    return environment.apiUrl + rota;
-  }
-
   converterModelParaParametros(objeto: any): HttpParams {
     let httpParams = new HttpParams();
     Object.keys(objeto).forEach(key => {
@@ -31,6 +27,7 @@ export class ServiceBase {
   }
 
   converterArrayParaParametros(key: any, objeto: any, httpParams: HttpParams): HttpParams {
+    // tslint:disable-next-line:prefer-for-of
     for (let index = 0; index < objeto[key].length; index++) {
       if (objeto[key][index] != null) {
         httpParams = httpParams.append(key, this.tratarStringParametro(objeto[key][index]));
@@ -48,6 +45,7 @@ export class ServiceBase {
     const name = keyCookie + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
+    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < ca.length; i++) {
       let c = ca[i];
       while (c.charAt(0) === ' ') {

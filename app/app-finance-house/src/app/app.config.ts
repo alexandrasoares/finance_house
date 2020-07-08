@@ -1,5 +1,5 @@
 export const APP_CONFIG  = {
-    apiUrl: 'https://192.168.43.59:3000',
+    apiUrl: 'http://192.168.43.59:3000',
     externalsApis: {
         hgBrasil: {
             apiUrl: 'https://api.hgbrasil.com/finance',
@@ -8,4 +8,3 @@ export const APP_CONFIG  = {
         }
     }
 };
-
