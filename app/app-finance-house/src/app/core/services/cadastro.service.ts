@@ -1,7 +1,7 @@
 import { Usuario } from './../models/usuario.model';
 import { UsuarioDTO } from './../usuario.dto';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Conta } from '../models/conta.model';
@@ -11,23 +11,25 @@ import { ContaDTO } from '../conta.dto';
 
 @Injectable()
 export class CadastroService {
-
     constructor(private http: HttpClient) { }
 
-    getAll(): Observable<Conta[]> {
-        return this.http.get<Conta[]>(`${APP_CONFIG.apiUrl}/contas`);
+    getAll(): Observable<Usuario[]> {
+        return this.http.get<Usuario[]>(`${APP_CONFIG.apiUrl}/movimentos`);
     }
 
-    getMovimentos(contaId: number): Observable<Movimento[]> {
-        return this.http.get<Movimento[]>(`${APP_CONFIG.apiUrl}/contas/${contaId}/movimentos`);
+    getById(email: string): Observable<Usuario> {
+        return this.http.get<Usuario>(`${APP_CONFIG.apiUrl}/cadastro/`);
     }
 
-    getById(contaId: number): Observable<Conta> {
-        return this.http.get<Conta>(`${APP_CONFIG.apiUrl}/contas/${contaId}`);
+    obterPorId(id: string): Observable<Usuario> {
+        const parametro = new HttpParams().append('id', id);
+        return this.http.get<Usuario>(`${APP_CONFIG.apiUrl}/${id}`, {
+          params: parametro
+        });
     }
 
-    insert(conta: UsuarioDTO): Observable<Usuario> {
-        const requestBody = JSON.stringify(conta);
+    insert(cadastro: UsuarioDTO): Observable<Usuario> {
+        const requestBody = JSON.stringify(cadastro);
         const headers = new HttpHeaders().append('Content-Type', 'application/json');
 
         return this.http.post<Usuario>(`${APP_CONFIG.apiUrl}/cadastro`, requestBody, { headers });

@@ -10,6 +10,9 @@ import { ListaMovimentosPage } from './lista-movimentos/lista-movimentos.page';
 import { AlertaPage } from './lista-movimentos/alerta/alerta.page';
 import { ListaPage } from './lista-movimentos/lista/lista.page';
 import { CartaoCreditoPipe } from '../config/pipes/cartao-credito';
+import { ListaContribuintesPage } from './lista-contribuintes/lista-contribuintes.page';
+import { LContribuintesPage } from './lista-contribuintes/l-contribuintes/l-contribuintes.page';
+import { AlertaContribuintesPage } from './lista-contribuintes/alerta-contribuintes/alerta-contribuintes.page';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CartaoCreditoPipe } from '../config/pipes/cartao-credito';
     ListaMovimentosPage,
     AlertaPage,
     ListaPage,
-    CartaoCreditoPipe
+    CartaoCreditoPipe,
+    ListaContribuintesPage,
+    LContribuintesPage,
+    AlertaContribuintesPage
   ],
   imports: [
     CommonModule,
@@ -30,7 +36,10 @@ import { CartaoCreditoPipe } from '../config/pipes/cartao-credito';
     ListaMovimentosPage,
     AlertaPage,
     ListaPage,
-    CartaoCreditoPipe
+    CartaoCreditoPipe,
+    ListaContribuintesPage,
+    LContribuintesPage,
+    AlertaContribuintesPage
   ]
 })
 export class SharedModule { }

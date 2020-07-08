@@ -1,0 +1,26 @@
+<ion-list>
+  <ion-item *ngFor="let c of crt">
+    <ion-label (click)="openOptionsDialog(crt)">
+      <h2>{{c.idUsuario.nome}}</h2>
+      <!-- <p>
+        <ion-icon name="calendar"></ion-icon>&nbsp;
+        {{}}
+      </p> -->
+      <!-- <p *ngIf="hasCategoria(movto)">
+        <ion-icon name="pricetag"></ion-icon>&nbsp;
+        {{movto.valor}}
+      </p>
+
+      <p *ngIf="hasCartaoCredito(movto)">
+        <ion-icon name="card"></ion-icon>&nbsp;
+        {{movto.status}}
+      </p> -->
+    </ion-label>
+
+    <!-- <ng-template #movtoDebito>
+      <ion-chip color="danger" [outline]="!isEfetivado(movto)">
+        <ion-label>{{c.valorDividido | number: '1.2-2'}}</ion-label>
+      </ion-chip>
+    </ng-template> -->
+  </ion-item>
+</ion-list>

@@ -45,4 +45,8 @@ export class MovimentoService {
     delete(movimentoId: number): Observable<any> {
         return this.http.delete(`${APP_CONFIG.apiUrl}/movimentos/${movimentoId}`);
     }
+
+    buscarUserPorEmail(movimentoId: number): Observable<Movimento> {
+        return this.http.get<Movimento>(`${APP_CONFIG.apiUrl}/movimentos/${movimentoId}/contribuinte`);
+    }
 }

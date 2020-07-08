@@ -14,7 +14,7 @@ import { MensagemToastService } from './../../core/services/mensagem-toast.servi
 })
 export class CadastroUsuarioPage extends DefaultComponentBase implements OnInit, OnDestroy {
   cadastroForm: FormGroup;
-  model: Usuario;
+  usuario: Usuario;
 
   constructor(
     private fb: FormBuilder,
@@ -23,7 +23,7 @@ export class CadastroUsuarioPage extends DefaultComponentBase implements OnInit,
     private router: Router,
   ) {
     super();
-    this.model = new Usuario();
+    this.usuario = new Usuario();
     this.configurarFormularioCadastro();
   }
 
@@ -37,12 +37,12 @@ export class CadastroUsuarioPage extends DefaultComponentBase implements OnInit,
 
   configurarFormularioCadastro() {
     this.cadastroForm = this.fb.group({
-      nome: new FormControl(this.model.nome, Validators.required),
-      email: new FormControl(this.model.email, Validators.compose([
+      nome: new FormControl(this.usuario.nome, Validators.required),
+      email: new FormControl(this.usuario.email, Validators.compose([
         Validators.required,
         Validators.email,
       ])),
-      senha: new FormControl(this.model.senha, Validators.required),
+      senha: new FormControl(this.usuario.senha, Validators.required),
     });
   }
 

@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inserir-contribuinte</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header headerName="Busca de familiar"></app-header>
 
-<ion-content>
+<!-- content -->
+<ion-content padding>
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
+  <ion-list>
+    <form>
+      <ion-item>
+        <ion-label position="stacked">Buscar usuário</ion-label>
+        <ion-input formControlName="descricao"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <ion-button class="ion-float-right">
+    Salvar
+    <ion-icon slot="end" name="checkmark"></ion-icon>
+  </ion-button>
 </ion-content>

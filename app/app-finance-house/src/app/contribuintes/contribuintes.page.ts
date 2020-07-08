@@ -1,7 +1,9 @@
-import { Usuario } from './../core/models/usuario.model';
-import { Component, OnInit } from '@angular/core';
-import { CadastroService } from '../core/services/cadastro.service';
-import { MensagemToastService } from '../core/services/mensagem-toast.service';
+import { CadastroService } from './../core/services/cadastro.service';
+import { ContribuinteModel } from './../core/models/contribuinte.model';
+import { Component, OnInit, Output } from '@angular/core';
+import _ from 'lodash';
+import { Usuario } from '../core/models/usuario.model';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-contribuintes',
@@ -9,29 +11,56 @@ import { MensagemToastService } from '../core/services/mensagem-toast.service';
   styleUrls: ['./contribuintes.page.scss'],
 })
 export class ContribuintesPage implements OnInit {
-
-  usuario: Usuario[] = [];
-  usuariosFiltrados: Usuario[] = [];
-
-  isLoading = true;
-  isFiltroRapidoAtivo = false;
-
-  private paginaAtual = 0;
-
+  item: string;
+  usuario: Array<{
+    nome: string,
+    email: string
+  }>;
+  queryText: string;
+  todosUsuarios: any;
 
   constructor(
-    private movimentoService: CadastroService,
-    private toast: MensagemToastService,
-    private cadastroService: CadastroService
-  ) { }
+    private usuarioService: CadastroService
+  ) {
+    this.queryText = '';
+    this.usuario = [
+      {
+        nome: 'Alexandra Soares',
+        email: 'ale@soares.com',
+      },
+      {
+        nome: 'Fabio Soares',
+        email: 'fabio@soares.com',
+      },
+      {
+        nome: 'Paola Soares',
+        email: 'paola@soares.com',
+      },
+      {
+        nome: 'Edvaldo Henrique',
+        email: 'ed@henrique.com',
+      },
+    ];
+
+    this.todosUsuarios = this.usuario;
+
+
+  }
 
   ngOnInit() {
   }
 
-  ionViewWillEnter() {
-    this.paginaAtual = 0;
-    this.usuario = [];
-    this.usuariosFiltrados = [];
+  listarUsuario(user: any) {
+    const item = user.target.value;
+
+    if (item && item.trim() !== '') {
+      this.usuario = _.values(this.todosUsuarios);
+      this.usuario = this.usuario.filter((u) => {
+        return (u.email.toLowerCase().indexOf(item.toLowerCase()) > -1);
+      });
+    } else {
+      this.usuario = this.todosUsuarios;
+    }
   }
 
 }
