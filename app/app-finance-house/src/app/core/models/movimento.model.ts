@@ -18,6 +18,7 @@ export class Movimento {
         public valorTotal: number,
         public acrescimo: number,
         public decrescimo: number,
+        public contribuinte: string,
         public status: string,
         public observacao: string,
         public conta: Conta,

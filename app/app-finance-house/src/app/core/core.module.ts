@@ -1,6 +1,6 @@
-import { ServiceBase } from './services/service-base';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AuthService } from './services/auth.service';
 import { MensagemToastService } from './services/mensagem-toast.service';
@@ -18,12 +18,14 @@ import { GeracaoTokenAuthService } from './services/geracao-token-auth.service';
 import { RequisicaoHttpService } from './services/requisicao-http.service';
 import { CobrancaService } from './services/cobranca.service';
 import { BeneficiarioService } from './services/beneficiario.service';
-
+import { ServiceBase } from './services/service-base';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     AuthService,

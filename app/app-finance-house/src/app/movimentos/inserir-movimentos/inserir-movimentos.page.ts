@@ -1,3 +1,4 @@
+import { TipoConta } from './../../core/models/tipo-conta.model';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -64,6 +65,7 @@ export class InserirMovimentosPage implements OnInit {
       tipo: this.isCreditoMovimento() ? 'C' : 'D',
       dataContabilizacao: DataService.toApiPattern(this.dataContabilizacao.value),
       valor: this.valor.value,
+      contribuinte: this.contribuinte.value,
       acrescimo: 0,
       decrescimo: 0,
       status: this.status.value,
@@ -198,6 +200,10 @@ export class InserirMovimentosPage implements OnInit {
     this.loadData(event);
   }
 
+  adicionarContribuinte(tipoConta: TipoConta): void {
+    // this.editarTipoContaEvent.emit(tipoConta);
+  }
+
   // showCartaoCreditoModal(): void {
 
   // }
@@ -229,6 +235,7 @@ export class InserirMovimentosPage implements OnInit {
       credito: [false, Validators.required],
       dataContabilizacao: [DataService.getNowAsJson(), Validators.required],
       valor: ['', Validators.required],
+      contribuinte: ['', Validators.required],
       status: [defaultStatus, Validators.required],
       conta: [''],
       categoria: [''],
@@ -244,6 +251,7 @@ export class InserirMovimentosPage implements OnInit {
   get credito() { return this.movimentoForm.get('credito'); }
   get dataContabilizacao() { return this.movimentoForm.get('dataContabilizacao'); }
   get valor() { return this.movimentoForm.get('valor'); }
+  get contribuinte() { return this.movimentoForm.get('contribuinte'); }
   get status() { return this.movimentoForm.get('status'); }
   // get conta() { return this.movimentoForm.get('conta'); }
   // get categoria() { return this.movimentoForm.get('categoria'); }

@@ -17,7 +17,7 @@ export class AppComponent {
   appPages: {title: string, url: string, icon: string}[] = [
     // { title: 'Inicio', url: 'home', icon: 'home' },
     { title: 'Finanças', url: 'movimentos', icon: 'stats-chart-outline' },
-    { title: 'Cartões', url: 'cartoes', icon: 'card' }
+    { title: 'Familia', url: 'contribuintes', icon: 'people-outline' }
   ];
 
   constructor(

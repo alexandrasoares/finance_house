@@ -44,6 +44,10 @@ const routes: Routes = [
   {
     path: 'subcategorias',
     loadChildren: () => import('./subcategorias/subcategorias.module').then( m => m.SubcategoriasPageModule)
+  },
+  {
+    path: 'contribuintes',
+    loadChildren: () => import('./contribuintes/contribuintes.module').then( m => m.ContribuintesPageModule)
   }
 
 ];

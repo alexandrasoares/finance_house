@@ -7,7 +7,7 @@
         {{movto.dataContabilizacao}}
       </p>
       <p *ngIf="hasCategoria(movto)">
-        <ion-icon name="pricetag"></ion-icon>&nbsp;
+        <ion-icon name="cash-outline"></ion-icon>&nbsp;
         {{movto.valor}}
       </p>
 
@@ -22,7 +22,8 @@
     </ion-chip>
 
     <ng-template #movtoDebito>
-      <ion-chip color="danger" (click)="alterarValor(movto)" [outline]="!isEfetivado(movto)">
+      <ion-chip color="primary" (click)="alterarValor(movto)" [outline]="!isEfetivado(movto)">
+        <ion-icon name="brush-outline">Editar valor</ion-icon>
         <ion-label>{{movto.valorTotal | number: '1.2-2'}}</ion-label>
       </ion-chip>
     </ng-template>

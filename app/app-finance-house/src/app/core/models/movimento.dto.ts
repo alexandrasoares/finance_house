@@ -13,6 +13,7 @@ export interface MovimentoDTO {
     decrescimo: number;
     status: string;
     observacao: string;
+    contribuinte: string;
 
     conta?: Conta;
     categoria?: Categoria;

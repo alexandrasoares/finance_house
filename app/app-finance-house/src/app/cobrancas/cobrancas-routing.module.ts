@@ -10,8 +10,8 @@ import { PagarCobrancaPage } from './pagar-cobranca/pagar-cobranca.page';
 import { RemoverCobrancaPage } from './remover-cobranca/remover-cobranca.page';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'cobranca', pathMatch: 'full' },
-  { path: 'cobranca', component: CobrancasPage },
+  { path: '', redirectTo: 'cobrancas', pathMatch: 'full' },
+  { path: 'cobrancas', component: CobrancasPage },
   { path: 'lista-cobranca', component: ListaCobrancaPage },
   { path: 'inserir-cobranca', component: InserirCobrancaPage },
   { path: 'editar-cobranca', component: EditarCobrancaPage },

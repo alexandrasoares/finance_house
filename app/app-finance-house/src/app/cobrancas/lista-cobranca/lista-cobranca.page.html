@@ -3,15 +3,11 @@
     <ion-label (click)="openOptionsDialog(cobranca)">
       <h2>{{cobranca.descricao}}</h2>
       <p>
-        <ion-icon name="calendar"></ion-icon>&nbsp;
+        <ion-icon name="calendar-outline"></ion-icon>&nbsp;
         {{cobranca.dataVencimento}}
       </p>
       <p>
-        <ion-icon name="person"></ion-icon>&nbsp;
-        {{cobranca.beneficiario.nome}}
-      </p>
-      <p>
-        <ion-icon name="pricetag"></ion-icon>&nbsp;
+        <ion-icon name="cash-outline"></ion-icon>&nbsp;
         {{transformStatus(cobranca)}}
       </p>
     </ion-label>

@@ -66,7 +66,7 @@ export class ListaPage implements OnInit {
         { text: 'Clonar', icon: 'copy', handler: () => {
           this.alertController.create({
             header: 'Confirmar',
-            message: 'Deseja realmente clonar este movimento? Um movimento idêntico será gerado com a data de hoje',
+            message: 'Deseja realmente clonar este registo? Um registro idêntico será gerado com a data de hoje',
             buttons: [
               { text: 'Não' },
               { text: 'Sim', handler: () => this.clonarEventEmitter.emit(movto) }

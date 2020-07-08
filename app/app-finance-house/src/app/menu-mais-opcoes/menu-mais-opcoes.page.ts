@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuMaisOpcoesPage implements OnInit {
   appPagesCadastros: any[] = [
+    {title: 'Familiares', icon: 'person-add-outline', link: '/contribuintes'},
     {title: 'Contas', icon: 'bookmarks', link: '/contas'},
     {title: 'Categorias', icon: 'pricetag', link: '/categorias'},
     {title: 'Subcategorias', icon: 'pricetags', link: '/subcategorias'},
@@ -17,7 +18,7 @@ export class MenuMaisOpcoesPage implements OnInit {
   ];
 
   appPagesOutros: any[] = [
-    {title: 'Cobranças', icon: 'clipboard', link: '/cobrancas'},
+    {title: 'Pendencias', icon: 'cash-outline', link: '/cobrancas'},
     // {title: 'Transferências', icon: 'repeat', link: '/transferencias'},
     // {title: 'Investimentos', icon: 'analytics', link: '/investimentos'}
   ];

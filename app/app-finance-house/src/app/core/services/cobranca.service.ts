@@ -15,7 +15,7 @@ export class CobrancaService {
     }
 
     getAll(): Observable<Cobranca[]> {
-        return this.http.get<Cobranca[]>(`${APP_CONFIG.apiUrl}/cobranca`);
+        return this.http.get<Cobranca[]>(`${APP_CONFIG.apiUrl}/cobrancas`);
     }
 
     getAllByPeriodo(minDate: string, maxDate: string): Observable<Cobranca[]> {

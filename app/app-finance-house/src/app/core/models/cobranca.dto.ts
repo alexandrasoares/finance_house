@@ -8,5 +8,5 @@ export interface CobrancaDTO {
     juros: number;
     desconto: number;
     observacao: string;
-    beneficiario: Beneficiario;
+    beneficiario?: Beneficiario;
 }

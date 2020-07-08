@@ -8,6 +8,7 @@ import { BeneficiarioService } from './../../core/services/beneficiario.service'
 import { MensagemToastService } from './../../core/services/mensagem-toast.service';
 import { CobrancaService } from './../../core/services/cobranca.service';
 import { Beneficiario } from './../../core/models/beneficiario.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inserir-cobranca',
@@ -17,24 +18,27 @@ import { Beneficiario } from './../../core/models/beneficiario.model';
 export class InserirCobrancaPage implements OnInit {
 
   cobrancaForm: FormGroup;
-  beneficiarios: Beneficiario[] = [];
+  // beneficiarios: Beneficiario[] = [];
 
   constructor(
     private fb: FormBuilder,
     private cobrancaService: CobrancaService,
     private beneficiarioService: BeneficiarioService,
-    private toast: MensagemToastService
-  ) { }
+    private toast: MensagemToastService,
+    private router: Router
+  ) {
+    this.initForm();
+  }
 
   ngOnInit() {
   }
 
   ionViewWillEnter() {
-    this.loadData();
+    // this.loadData();
   }
 
   doRefresh(event: any): void {
-    this.loadData(event);
+    // this.loadData(event);
   }
 
   inserir(): void {
@@ -45,30 +49,31 @@ export class InserirCobrancaPage implements OnInit {
       valor: this.valor.value,
       juros: this.juros.value,
       desconto: this.desconto.value,
-      beneficiario: this.beneficiarios.find((b: Beneficiario) => b.id === this.beneficiario.value),
+      // beneficiario: this.beneficiarios.find((b: Beneficiario) => b.id === this.beneficiario.value),
       observacao: this.obs.value
     };
 
     this.cobrancaService.insert(cobranca).subscribe((dados: Cobranca) => {
+      this.router.navigate(['/cobrancas']);
       this.toast.showSuccessToast(`Cobrança ${dados.descricao} inserida com sucesso`);
       this.cobrancaForm.reset();
     });
   }
 
-  private loadData(event: any = null): void {
-    this.beneficiarioService.getAll().subscribe((dados: Beneficiario[]) => {
-      this.beneficiarios = dados;
+  // private loadData(event: any = null): void {
+  //   this.beneficiarioService.getAll().subscribe((dados: Beneficiario[]) => {
+  //     this.beneficiarios = dados;
 
-      if (dados.length === 0){
-        this.toast.showErrorToast('Nenhum beneficiário cadastrado');
-        this.beneficiario.disable();
-      }
+  //     if (dados.length === 0){
+  //       this.toast.showErrorToast('Nenhum beneficiário cadastrado');
+  //       this.beneficiario.disable();
+  //     }
 
-      if (event !== null){
-        event.target.complete();
-      }
-    });
-  }
+  //     if (event !== null){
+  //       event.target.complete();
+  //     }
+  //   });
+  // }
 
   getMaxDate(): string {
     return DataService.getDatePickerMaxDate();
@@ -82,7 +87,7 @@ export class InserirCobrancaPage implements OnInit {
       valor: ['', Validators.required],
       juros: [''],
       desconto: [''],
-      beneficiario: ['', Validators.required],
+      // beneficiario: ['', Validators.required],
       obs: ['']
     });
   }
@@ -93,7 +98,7 @@ export class InserirCobrancaPage implements OnInit {
   get valor() { return this.cobrancaForm.get('valor'); }
   get juros() { return this.cobrancaForm.get('juros'); }
   get desconto() { return this.cobrancaForm.get('desconto'); }
-  get beneficiario() { return this.cobrancaForm.get('beneficiario'); }
+  // get beneficiario() { return this.cobrancaForm.get('beneficiario'); }
   get obs() { return this.cobrancaForm.get('obs'); }
 
 }
